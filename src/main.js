@@ -23,12 +23,12 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/prize-microservices/',
+            path: '/prize-microservices-front/',
             name: 'HomePage',
             component: HomePage
         },
         {
-            path: '/prize-microservices/:id',
+            path: '/prize-microservices-front/:id',
             name: 'UpdatePrizePage',
             component: UpdatePrizePage
         }
