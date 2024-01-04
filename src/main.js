@@ -8,7 +8,7 @@ import '@quasar/extras/material-icons/material-icons.css'
 // Import Quasar css
 import 'quasar/src/css/index.sass'
 
-import {createRouter, createWebHistory} from "vue-router";
+import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import HomePage from "./pages/HomePage.vue";
 import UpdatePrizePage from "./pages/UpdatePrizePage.vue";
 
@@ -20,15 +20,15 @@ import App from './App.vue'
 const myApp = createApp(App)
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
         {
-            path: '/prize-microservices-front/',
+            path: '/',
             name: 'HomePage',
             component: HomePage
         },
         {
-            path: '/prize-microservices-front/:id',
+            path: '/:id',
             name: 'UpdatePrizePage',
             component: UpdatePrizePage
         }
