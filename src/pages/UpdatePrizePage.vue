@@ -79,9 +79,12 @@ export default {
           adminDescription: adminDescription.value,
           winnerDescription: winnerDescription.value
         })
-            .then(() => {
-              adminDescription.value = null;
-              winnerDescription.value = null;
+            .then((response) => {
+              if (response.status === 200) {
+                adminDescription.value = null;
+                winnerDescription.value = null;
+                window.Telegram.WebApp.close()
+              }
             })
       },
 
